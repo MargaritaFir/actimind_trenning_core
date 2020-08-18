@@ -1,0 +1,1 @@
+# actimind_trenning_core
