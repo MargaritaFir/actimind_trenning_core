@@ -6,12 +6,6 @@ class Hamburger {
         this.toppings =[];
         this.stuffing = stuffing;
         this.size = size;
-        this.addTopping = this.addTopping.bind(this);
-        this.removeTopping = this.removeTopping.bind(this);
-        this.getToppings = this.getToppings.bind(this);
-        this.getStuffing = this.getStuffing.bind(this);
-        this.calculatePrice = this.calculatePrice.bind(this);
-        this.calculateCalories = this.calculateCalories.bind(this);
     }
 
     addTopping(topping){
