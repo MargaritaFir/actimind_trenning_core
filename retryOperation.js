@@ -11,6 +11,7 @@ function fn_1() {
 
 
 function retryOperation(fn, maxAttempts){
+let count = 0;
     return new Promise((resolve, reject) => {
         let attempt = () => {
             if(!maxAttempts){
@@ -19,7 +20,8 @@ function retryOperation(fn, maxAttempts){
                 fn().then((data) => resolve(data))
                 .catch((e) => {
                     maxAttempts--;
-                    console.log(`Attempt is error`)
+                    console.log(`Attempt ${count} is error`);
+			count++;
                     setTimeout(() => {attempt()}, 1000);
                 })
             }
